@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/BookShop/admin/easyui/themes/default/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="/BookShop/admin/easyui/themes/icon.css"/>
+		<script src="/BookShop/admin/easyui/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/BookShop/admin/easyui/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/BookShop/admin/easyui/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/BookShop/admin/js/goods.js"></script>
+		<script type="text/javascript" src="/BookShop/admin/js/datagrid-detailview.js"></script>
+		<style type="text/css">
+			#tb{
+		width: 500px;
+		margin: 10px auto;
+	}
+	#tb td{padding: 10px;}
+
+	</style>
+</head>
+<body>
+商品管理
+		<hr />
+<!-- combobox支持  -->
+<input id="cate" class="easyui-combobox" name="cate"   />   
+<table id="tab"></table>
+	<div id="update" class="easyui-dialog" title="添加用户" style="width:500px;height:550px" data-options="iconCls:'icon-add', 
+                collapsible:true,resizable:true,modal:true,buttons:'#footer',closed:true">  
+				
+		<form action=""  enctype="multipart/form-data"  id="f2" >
+			<table id="tb" >
+			
+			
+			<tr><td>商品名称:</td><td><input	 type="text" name="gname" id="gname" class="easyui-validatebox easyui-textbox" data-options="required:true" value="" /></td></tr>
+			<tr><td>作者:</td><td><input	 type="text" name="gauthor" id="gauthor" class="easyui-validatebox easyui-textbox" data-options="required:true"  value="" /></td></tr>
+			<tr><td>售价:</td><td><input  type="text" name="gsaleprice" id="gsaleprice" class="easyui-validatebox easyui-textbox" data-options="required:true" value="" />
+			<tr><td>进价:</td><td><input  type="text" name="ginprice" id="ginprice" class="easyui-validatebox easyui-textbox" data-options="required:true" value="" />
+			<tr><td>类别：</td><td><input type="text" name="gcate" class="easyui-validatebox easyui-textbox" data-options="required:true" id="gcate" value="" /></td></tr>
+			<tr><td>出版社：</td><td><input type="text" name="gpublish" class="easyui-validatebox easyui-textbox" data-options="required:true" id="gpublish" value="" />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td></tr>
+			<tr><td>图片名称：</td><td><input  type="text" id="img" name="img" class="easyui-validatebox easyui-textbox" data-options="required:true" ></td></tr>
+			<tr><td>书籍描述：</td><td><input type="text" id="disc" name="disc" class="easyui-textbox" data-options="multiline:true" value="" style="width:300px;height:100px"></td></tr>
+			</table>
+			</form>
+		</div>
+		<div id="footer">
+	<a id="btnsave" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">保存</a>  
+	<a id="btncancel" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">取消</a>  
+		</div>
+		
+		<div id="dlg">
+			<img id="simg"/>
+		</div>
+</body>
+</html>

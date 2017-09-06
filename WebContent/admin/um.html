@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="/BookShop/admin/easyui/themes/default/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="/BookShop/admin/easyui/themes/icon.css"/>
+		<script src="/BookShop/admin/easyui/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/BookShop/admin/easyui/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/BookShop/admin/easyui/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/BookShop/admin/js/um.js"></script>
+			<style type="text/css">
+	#tb{
+		width: 300px;
+		margin: 20px auto;
+	}
+	#tb td{padding: 7px;}
+	#tab2 td{
+		width: 300px;
+		margin: 10px auto;
+	}
+	#tab2{
+		width: 300px;
+		margin: 20px auto;
+	}
+	
+	</style>
+	</head>
+	<body>
+		用户管理
+		<hr />
+		<div id="tab">
+		</div>
+		<div id="update" class="easyui-dialog" title="添加用户" style="width:400px;height:400px" data-options="iconCls:'icon-add', 
+                collapsible:true,resizable:true,modal:true,buttons:'#footer',closed:true">  
+				
+		<form action="" id="f2">
+			<table id="tb" >
+			
+			
+			<tr><td>邮箱:</td><td><input	 type="text" name="uemail" id="uemail" class="easyui-validatebox easyui-textbox" data-options="required:true,validType:'email'" value="" /></td></tr>
+			<tr><td>账号:</td><td><input	 type="text" name="uloginid" id="uloginid" class="easyui-validatebox easyui-textbox" data-options="required:true"  value="" /></td></tr>
+			<tr><td>密码:</td><td><input  type="password" name="upassword" id="upassword" class="easyui-validatebox easyui-textbox" data-options="required:true" value="" />
+			<tr><td>性别：</td><td>
+			<select id="sex" class="easyui-combobox" name="sex" style="width: 173px;">
+      						<option value="男">男</option>
+      						<option value="女">女</option>
+      		</select>
+
+			</td>
+			</tr>
+			<tr><td>地址：</td><td><input type="text" name="address" id="address" class="easyui-validatebox easyui-textbox" data-options="required:true" value="" /></td></tr>
+			<tr><td>电话：</td><td><input type="text" name="tel" class="easyui-validatebox easyui-textbox" data-options="required:true" id="tel" value="" /></td></tr>
+			<tr>
+				<td>冻结：
+				<input type="radio" id="userstate" name="userstate" value="36D0F394FC6A45829385E0BE11208263"/></td>
+			<td>正常：<input type="radio" id="userstate" name="userstate" value="B5868B7A06E54DAEB19658343D3A2B28"/></td></tr>
+			</table>
+					</form>
+		</div>
+		<div id="footer">
+	<a id="btnsave" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">保存</a>  
+	<a id="btncancel" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">取消</a>  
+		</div>
+		<div id="confirmID" class="easyui-dialog" name="confirmID" title="请输入密码" data-options="closed:true,buttons:'#footer'" style="width:400px;height:150px">
+		<table id="tab2"><tr>
+			<td>密码：</td><td><input type="password" name="cpassword" id="cpassword" class="easyui-validatebox easyui-textbox" data-options="required:true,iconCls:'icon-lock'" style="width: 200px" value=""/></td>
+			</tr>
+		</table>
+		</div>
+	</body>
+</html>
